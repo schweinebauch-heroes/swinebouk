@@ -1,8 +1,8 @@
 module.exports = {
-	Articulation: require('./lib/Articulation'),
-	Vowel: require('./lib/Vowel'),
-	VowelChart: require('./lib/VowelChart'),
-	VowelLang: require('./lib/VowelLang'),
-	VowelList: require('./lib/VowelList'),
-	VowelPlotter: require('./lib/VowelPlotter')
+	Articulation: require('./lib/articulation'),
+	Vowel: require('./lib/vowel'),
+	VowelChart: require('./lib/vowel-chart'),
+	VowelLang: require('./lib/vowel-lang'),
+	VowelList: require('./lib/vowel-list'),
+	VowelPlotter: require('./lib/vowel-plotter'),
 };

@@ -20,6 +20,7 @@
     "test": "ava"
   },
   "xo": {
-    "extends": "ukumari"
+    "extends": "ukumari",
+		"prettier": true
   }
 }
