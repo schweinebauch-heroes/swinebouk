@@ -5,5 +5,21 @@
   "main": "index.js",
   "repository": "git@github.com:schweinebauch-heroes/swinebouk.git",
   "author": "Johnny Lee-Othon <jleeothon@icloud.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "snapsvg-cjs": "^0.0.6"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint-config-ukumari": "^0.1.1",
+    "xo": "^0.20.3"
+  },
+  "scripts": {
+    "lint": "xo",
+    "test": "ava"
+  },
+  "xo": {
+    "extends": "ukumari"
+  }
 }
