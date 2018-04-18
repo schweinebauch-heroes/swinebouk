@@ -19,6 +19,9 @@
     "lint": "xo",
     "test": "ava"
   },
+	"engines": {
+		"node": "v8.11.1"
+	},
   "xo": {
     "extends": "ukumari",
 		"prettier": true
