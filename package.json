@@ -7,8 +7,10 @@
   "author": "Johnny Lee-Othon <jleeothon@icloud.com>",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.5",
-    "snapsvg-cjs": "^0.0.6"
+    "ajv": "^6.6.1",
+    "snapsvg": "^0.5.1",
+    "snapsvg-cjs": "^0.0.6",
+    "xsampa": "^0.2.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
@@ -21,6 +23,6 @@
   },
   "xo": {
     "extends": "ukumari",
-		"prettier": true
+    "prettier": true
   }
 }

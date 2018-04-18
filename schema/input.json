@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "swinebouk/schema/input.json",
+  "title": "Input Schema",
+  "type": "object",
+  "properties": {
+    "vowels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "front": {
+            "$ref": "./defs.json#/front"
+          },
+          "close": {
+            "$ref": "./defs.json#/close"
+          },
+          "round": {
+            "$ref": "./defs.json#/round"
+          },
+          "label": {
+            "$ref": "./defs.json#/label"
+          },
+          "x-sampa": {
+            "$ref": "./defs.json#/x-sampa"
+          }
+        },
+        "oneOf": [
+          {
+            "required": [
+              "front",
+              "close",
+              "round",
+              "label"
+            ]
+          },
+          {
+            "required": [
+              "front",
+              "close",
+              "round",
+              "x-sampa"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "vowels"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "swinebouk/schema/query.json",
+  "title": "Query Schema",
+  "type": "object",
+  "properties": {
+    "v": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/vowel"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/vowel"
+          }
+        }
+      ],
+      "description": "Vowel or array of vowels."
+    }
+  },
+  "required": [
+    "v"
+  ],
+  "definitions": {
+    "vowel": {
+      "type": "string",
+      "pattern": "^f(1|0?(\\.\\d+)?)c(1|0?(\\.\\d+)?)([ru])((l|x)([^;,/?:@&=$#]+))$",
+      "description": "A vowel in a format indicating frontness, closeness, rounded/unrounded, and label or X-SAMPA label: f<number>c<number><r|u>(l<label>|x<X-SAMPA>)."
+    }
+  }
+}
