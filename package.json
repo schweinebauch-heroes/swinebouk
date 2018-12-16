@@ -1,6 +1,6 @@
 {
   "name": "swinebouk",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Engine for generating vowel charts",
   "main": "index.js",
   "repository": "git@github.com:schweinebauch-heroes/swinebouk.git",
@@ -21,9 +21,9 @@
     "lint": "xo",
     "test": "ava"
   },
-	"engines": {
-		"node": "v8.11.1"
-	},
+  "engines": {
+    "node": "v8.11.1"
+  },
   "xo": {
     "extends": "ukumari",
     "prettier": true
