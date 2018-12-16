@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "swinebouk/schema/normal.json",
+  "title": "Normal Schema",
+  "description": "Similar to an input schema but requires labels to be literal.",
+  "type": "object",
+  "properties": {
+    "vowels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "front": {
+            "$ref": "./defs.json#/front"
+          },
+          "close": {
+            "$ref": "./defs.json#/close"
+          },
+          "round": {
+            "$ref": "./defs.json#/round"
+          },
+          "label": {
+            "$ref": "./defs.json#/label"
+          }
+        },
+        "required": [
+          "front",
+          "close",
+          "round",
+          "label"
+        ]
+      }
+    }
+  },
+  "required": [
+    "vowels"
+  ]
+}
