@@ -8,8 +8,6 @@
   "license": "ISC",
   "dependencies": {
     "ajv": "^6.6.1",
-    "snapsvg": "^0.5.1",
-    "snapsvg-cjs": "^0.0.6",
     "xsampa": "^0.2.0"
   },
   "devDependencies": {
