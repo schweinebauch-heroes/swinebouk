@@ -24,8 +24,8 @@ Each vowel is described as a string in the form `f<frontness>c<closeness><roundn
 - "closeness" is a number between 0 and 1, in the same manner of "frontness",
 - "roundness" is the letter "u" (unrounded) or "r" (rounded),
 - "label" is one of the following:
-  - "l", followed by any characters valid as a query string value e.g. "l%2F%C9%99%2F" for "/ə/", or "%2Fə%2F" (if internationalized URIs are supported),
-	- "x", followed by any characters valid as a query string value, which then get translated from X-SAMPA to IPA, e.g. "@" for "ə".
+  - "l", followed by any characters valid as a query string value e.g. `"l%2F%C9%99%2F"` for "/ə/", or `"%2Fə%2F"` (if internationalized URIs are supported),
+	- "x", followed by any characters valid as a query string value, which then get translated from X-SAMPA to IPA, e.g. `"@"` for "ə".
 
 Examples:
 
