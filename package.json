@@ -7,7 +7,8 @@
   "author": "Johnny Lee-Othon <jleeothon@icloud.com>",
   "license": "ISC",
   "dependencies": {
-    "ajv": "^6.6.1"
+    "ajv": "^6.6.1",
+    "x-sampa": "^0.1.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",

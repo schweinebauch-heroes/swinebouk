@@ -3409,6 +3409,13 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+num-sort@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/num-sort/-/num-sort-1.0.0.tgz#cabec1fd5f4da4aca995af90b7a0f379944e1dbd"
+  integrity sha1-yr7B/V9NpKypla+Qt6DzeZROHb0=
+  dependencies:
+    number-is-nan "^1.0.0"
+
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
@@ -4369,6 +4376,15 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.0.tgz#7a7cd28470cc6d3a1cfe6d66886f6bc430d3ac87"
   integrity sha512-2+EPwgbnmOIl8HjGBXXMd9NAu02vLjOO1nWw4kmeRDFyHn+M/ETfHxQUK0oXg8ctgVnl9t3rosNVsZ1jG61nDA==
 
+split-at@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/split-at/-/split-at-1.2.0.tgz#9961622b6ac9ff879b3a09632e4f6fec5a293024"
+  integrity sha1-mWFiK2rJ/4ebOgljLk9v7FopMCQ=
+  dependencies:
+    array-uniq "^1.0.2"
+    arrify "^1.0.0"
+    num-sort "^1.0.0"
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -4892,6 +4908,13 @@ write@^0.2.1:
   integrity sha1-X8A4KOJkzqP+kUVUdvejxWbLB1c=
   dependencies:
     mkdirp "^0.5.1"
+
+x-sampa@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/x-sampa/-/x-sampa-0.1.1.tgz#bd7f96646ca45c07405f287179847bcda476c39b"
+  integrity sha512-wr32QXPWW6Cq8G7eAwalu5thWJvn7Ojoge1q7QyyFPK8ogxitazn07zM27/WP6stT4heM6vtAZayrUSzdWqcxQ==
+  dependencies:
+    split-at "^1.2.0"
 
 xdg-basedir@^3.0.0:
   version "3.0.0"
