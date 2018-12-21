@@ -2,16 +2,16 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "swinebouk/schema/defs.json",
   "front": {
-    "type": "number",
-    "description": "A number indicating how front the vowel is: \"1\" for \"front\" and \"0\" for \"back\".",
-    "minimum": 0,
-    "maximum": 1
+    "type": "integer",
+    "description": "Indicates how front the vowel is: \"12\" for \"front\" and \"1\" for \"back\".",
+    "minimum": 1,
+    "maximum": 12
   },
   "close": {
-    "type": "number",
-    "description": "A number indicating how close the vowel is: \"1\" for \"close\" and \"0\" for \"open\".",
-    "minimum": 0,
-    "maximum": 1
+    "type": "integer",
+    "description": "Indicates how close the vowel is: \"12\" for \"close\" and \"1\" for \"open\".",
+    "minimum": 1,
+    "maximum": 12
   },
   "round": {
     "type": "boolean",

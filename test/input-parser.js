@@ -8,14 +8,14 @@ const parser = new InputParser();
 test('Parse correctly', t => {
 	const input = {
 		vowels: [
-			{front: 1, close: 1, round: true, label: 'y'},
-			{front: 0, close: 0, round: false, 'x-sampa': 'A'},
+			{front: 12, close: 12, round: true, label: 'y'},
+			{front: 1, close: 1, round: false, 'x-sampa': 'A'},
 		],
 	};
 	const expected = {
 		vowels: [
-			{front: 1, close: 1, round: true, label: 'y'},
-			{front: 0, close: 0, round: false, label: 'ɑ'},
+			{front: 12, close: 12, round: true, label: 'y'},
+			{front: 1, close: 1, round: false, label: 'ɑ'},
 		],
 	};
 	const result = parser.parse(input);
@@ -32,7 +32,7 @@ test(
 	'Missing basic vowel quality',
 	testMissingRequiredField,
 	{
-		vowels: [{front: 1, close: 1, label: 't'}],
+		vowels: [{front: 12, close: 12, label: 't'}],
 	},
 	ParseError
 );
@@ -41,7 +41,7 @@ test(
 	'Missing label',
 	testMissingRequiredField,
 	{
-		vowels: [{front: 1, close: 1, round: 1}],
+		vowels: [{front: 12, close: 12, round: 12}],
 	},
 	ParseError
 );
@@ -50,7 +50,7 @@ test(
 	'Too many labels',
 	testMissingRequiredField,
 	{
-		vowels: [{front: 1, close: 1, round: 1, label: 'x', 'x-sampa': 'x'}],
+		vowels: [{front: 12, close: 12, round: 12, label: 'x', 'x-sampa': 'x'}],
 	},
 	ParseError
 );
@@ -59,7 +59,7 @@ test(
 	'Front value too big',
 	testMissingRequiredField,
 	{
-		vowels: [{front: 1.1, close: 1, round: 1, label: 'x', 'x-sampa': 'x'}],
+		vowels: [{front: 12, close: 12, round: 12, label: 'x', 'x-sampa': 'x'}],
 	},
 	ParseError
 );
@@ -68,7 +68,7 @@ test(
 	'Front value too small',
 	testMissingRequiredField,
 	{
-		vowels: [{front: -1, close: 1, round: 1, label: 'x', 'x-sampa': 'x'}],
+		vowels: [{front: -1, close: 12, round: 12, label: 'x', 'x-sampa': 'x'}],
 	},
 	ParseError
 );

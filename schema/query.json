@@ -25,7 +25,7 @@
   "definitions": {
     "vowel": {
       "type": "string",
-      "pattern": "^f(1|0?(\\.\\d+)?)c(1|0?(\\.\\d+)?)([ru])((l|x)([^;,/?:@&=$#]+))$",
+      "pattern": "^f(\\d{1,2})c(\\d{1,2})([ru]?)(l|x)([^;,/?:@&=$#]+)$",
       "description": "A vowel in a format indicating frontness, closeness, rounded/unrounded, and label or X-SAMPA label: f<number>c<number><r|u>(l<label>|x<X-SAMPA>)."
     }
   }
