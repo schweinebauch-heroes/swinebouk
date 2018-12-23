@@ -1,6 +1,6 @@
 {
   "name": "swinebouk",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Engine for generating vowel charts",
   "main": "index.js",
   "repository": "git@github.com:schweinebauch-heroes/swinebouk.git",
