@@ -11,10 +11,20 @@
         "type": "object",
         "properties": {
           "front": {
-            "$ref": "./defs.json#/front"
+            "description": "Indicates how front the vowel is: \"1\" for \"front\" and \"0\" for \"back\".",
+            "anyOf": [
+              {
+                "$ref": "./defs.json#/literalRatioOfOne"
+              }
+            ]
           },
           "close": {
-            "$ref": "./defs.json#/close"
+            "description": "Indicates how close the vowel is: \"1\" for \"close\" and \"0\" for \"open\".",
+            "anyOf": [
+              {
+                "$ref": "./defs.json#/literalRatioOfOne"
+              }
+            ]
           },
           "round": {
             "$ref": "./defs.json#/round"

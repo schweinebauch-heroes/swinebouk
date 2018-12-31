@@ -5,13 +5,10 @@
     "description": "Indicates how front the vowel is: \"1\" for \"front\" and \"0\" for \"back\".",
     "anyOf": [
       {
-        "type": "number",
-        "minimum": 0,
-        "maxiumum": 1
+        "$ref": "#/literalRatioOfOne"
       },
       {
-        "type": "string",
-        "pattern": "(0|[1-9]\\d+)/[1-9]\\d*"
+        "$ref": "#/fractionRatioOfOne"
       }
     ]
   },
@@ -19,13 +16,10 @@
     "description": "Indicates how close the vowel is: \"1\" for \"close\" and \"0\" for \"open\".",
     "anyOf": [
       {
-        "type": "number",
-        "minimum": 0,
-        "maxiumum": 1
+        "$ref": "#/literalRatioOfOne"
       },
       {
-        "type": "string",
-        "pattern": "(0|[1-9]\\d+)/[1-9]\\d*"
+        "$ref": "#/fractionRatioOfOne"
       }
     ]
   },
@@ -40,5 +34,14 @@
   "x-sampa": {
     "type": "string",
     "description": "Text to be translated from X-SAMPA to IPA before using as label."
+  },
+  "literalRatioOfOne": {
+    "type": "number",
+    "minimum": 0,
+    "maxiumum": 1
+  },
+  "fractionRatioOfOne": {
+    "type": "string",
+    "pattern": "(0|[1-9]\\d+)/[1-9]\\d*"
   }
 }

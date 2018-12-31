@@ -10,10 +10,26 @@
         "type": "object",
         "properties": {
           "front": {
-            "$ref": "./defs.json#/front"
+            "description": "Indicates how front the vowel is: \"1\" for \"front\" and \"0\" for \"back\". JSON numbers are acceptable, or fractions like 1/3.",
+            "anyOf": [
+              {
+                "$ref": "./defs.json#/literalRatioOfOne"
+              },
+              {
+                "$ref": "./defs.json#/fractionRatioOfOne"
+              }
+            ]
           },
           "close": {
-            "$ref": "./defs.json#/close"
+            "description": "Indicates how close the vowel is: \"1\" for \"close\" and \"0\" for \"open\". JSON numbers are acceptable, or fractions like 1/3.",
+            "anyOf": [
+              {
+                "$ref": "./defs.json#/literalRatioOfOne"
+              },
+              {
+                "$ref": "./defs.json#/fractionRatioOfOne"
+              }
+            ]
           },
           "round": {
             "$ref": "./defs.json#/round"
