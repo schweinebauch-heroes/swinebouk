@@ -5,24 +5,33 @@ import ParseError from '../lib/input-parse-error';
 
 const parser = new InputParser();
 
-test('Parse correctly', t => {
-	const input = {
-		vowels: [
-			{front: 1, close: 1, round: true, label: 'y'},
-			{front: 0, close: 0, round: false, 'x-sampa': 'A'},
-		],
-	};
-	const expected = {
-		vowels: [
-			{front: 1, close: 1, round: true, label: 'y'},
-			{front: 0, close: 0, round: false, label: 'ɑ'},
-		],
-	};
+function parseCorrectly(t, input, expected) {
 	const result = parser.parse(input);
 	t.deepEqual(result, expected);
-});
+}
 
-function testMissingRequiredField(t, input, errorClass) {
+test(
+	'Test integer numbers',
+	parseCorrectly,
+	{vowels: [{front: 0, close: 1, round: true, label: 'u'}]},
+	{vowels: [{front: 0, close: 1, round: true, label: 'u'}]}
+);
+
+test(
+	'Test decimal',
+	parseCorrectly,
+	{vowels: [{front: 0.5, close: 0.1, round: false, 'x-sampa': '6'}]},
+	{vowels: [{front: 0.5, close: 0.1, round: false, label: 'ɐ'}]}
+);
+
+test(
+	'Test fraction',
+	parseCorrectly,
+	{vowels: [{front: 0, close: '2/3', round: true, label: 'o'}]},
+	{vowels: [{front: 0, close: 2 / 3, round: true, label: 'o'}]}
+);
+
+function testInvalidInput(t, input, errorClass) {
 	t.throws(() => {
 		parser.parse(input);
 	}, errorClass);
@@ -30,7 +39,7 @@ function testMissingRequiredField(t, input, errorClass) {
 
 test(
 	'Missing basic vowel quality',
-	testMissingRequiredField,
+	testInvalidInput,
 	{
 		vowels: [{front: 1, close: 1, label: 't'}],
 	},
@@ -39,7 +48,7 @@ test(
 
 test(
 	'Missing label',
-	testMissingRequiredField,
+	testInvalidInput,
 	{
 		vowels: [{front: 1, close: 1, round: 1}],
 	},
@@ -48,7 +57,7 @@ test(
 
 test(
 	'Too many labels',
-	testMissingRequiredField,
+	testInvalidInput,
 	{
 		vowels: [{front: 1, close: 1, round: true, label: 'x', 'x-sampa': 'x'}],
 	},
@@ -57,7 +66,7 @@ test(
 
 test(
 	'Front value too big',
-	testMissingRequiredField,
+	testInvalidInput,
 	{
 		vowels: [{front: 1, close: 1, round: true, label: 'x', 'x-sampa': 'x'}],
 	},
