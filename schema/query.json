@@ -5,17 +5,10 @@
   "type": "object",
   "properties": {
     "v": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/vowel"
-        },
-        {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/vowel"
-          }
-        }
-      ],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/vowel"
+      },
       "description": "Vowel or array of vowels."
     }
   },
@@ -25,7 +18,7 @@
   "definitions": {
     "vowel": {
       "type": "string",
-      "pattern": "^f(\\d{1,2})c(\\d{1,2})([ru]?)(l|x)([^;,/?:@&=$#]+)$",
+      "pattern": "^f([1-9]\\d*\\/[1-9]\\d*|0?\\.\\d+|0|1)c([1-9]\\d*\\/[1-9]\\d*|0?\\.\\d+|0|1)(r|u)(l|x)([^;,/?:@&=$#]+)$",
       "description": "A vowel in a format indicating frontness, closeness, rounded/unrounded, and label or X-SAMPA label: f<number>c<number><r|u>(l<label>|x<X-SAMPA>)."
     }
   }

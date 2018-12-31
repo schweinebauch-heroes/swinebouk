@@ -20,7 +20,7 @@
     "test": "ava"
   },
   "engines": {
-    "node": "v8.11.1"
+    "node": ">=8"
   },
   "xo": {
     "extends": "ukumari",
